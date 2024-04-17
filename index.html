@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,16 +7,22 @@
 </head>
 <body>
     <h1>Student Report</h1>
-    <form action="">
+    <form action="" id="flightRecordForm">
 
         <label for="fname">First name</label>
-        <input type="text" id="fname">
+        <input type="text" id="fname" placeholder="Please input your first name">
 
         <label for="lname">Last name</label>
-        <input type="text" id="lname">
+        <input type="text" id="lname" placeholder="Please input your family name">
 
         <label for="cadetID">Cadet ID </label>
-        <input type="text" id="cadetID">
+        <input type="text" id="cadetID" placeholder="CADET ID">
+
+        <label for="record">Record</label>
+        <input type="text" id="record" placeholder="Record">
+
+        <button type="submit">Submit</button>
     </form>
 </body>
+<script src="index.js" type="text/javascript"></script>
 </html>
