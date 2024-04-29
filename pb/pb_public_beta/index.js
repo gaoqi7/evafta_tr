@@ -20,10 +20,13 @@ let trSearchByID = document.getElementById("trSearchByID")
 trSearchByID.addEventListener("submit",(e)=>{
     e.preventDefault();
     let quaryID = document.getElementById("quaryID").value
+    let finalRes = 0
     console.log(quaryID)
     quaryResult = pb.collection('evafta_tr').getList(1,10,{
         filter: `cadetID = '${quaryID}'`
     }).then(data=>{
-        console.log(data.items[0].record)
+    document.getElementById("cadetRecord").innerHTML = data.items[0].record
     })
+    
+        
 })
