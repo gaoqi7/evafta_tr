@@ -19,14 +19,17 @@ let trSearchByID = document.getElementById("trSearchByID")
 
 trSearchByID.addEventListener("submit",(e)=>{
     e.preventDefault();
-    let quaryID = document.getElementById("quaryID").value
-    let finalRes = 0
-    console.log(quaryID)
+    let queryID = document.getElementById("queryID").value
+    console.log(queryID)
     quaryResult = pb.collection('evafta_tr').getList(1,10,{
-        filter: `cadetID = '${quaryID}'`
+        filter: `cadetID = '${queryID}'`
     }).then(data=>{
-    document.getElementById("cadetRecord").innerHTML = data.items[0].record
+    document.getElementById("queryResultID").innerHTML = `${queryID}`
+    document.getElementById("queryResultRecord").innerHTML = `${data.items[0].record}`
+})
     })
     
         
-})
+
+
+
