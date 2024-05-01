@@ -13,7 +13,6 @@ flightRecordForm.addEventListener("submit",(e)=>{
     }
     pb.collection('evafta_tr').create(data)
 
-
 })
 let trSearchByID = document.getElementById("trSearchByID")
 
