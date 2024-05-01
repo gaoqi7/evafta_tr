@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <title>Training Report</title>
+  </head>
+  <body>
+    <h1>Student Report Input</h1>
+    <form action="" id="flightRecordForm">
+      <label for="cadetID">Cadet ID </label>
+      <input type="text" id="cadetID" placeholder="CADET ID" />
+
+      <label for="record">Record</label>
+      <input type="text" id="record" placeholder="Record" />
+
+      <button type="submit">Submit</button>
+    </form>
+    <hr />
+    <h1>Student Report Search by ID</h1>
+    <form action="" id="trSearchByID">
+      <label for="queryID">Please Input Cadet ID</label>
+      <input type="text" id="queryID" placeholder="23W044" />
+      <button type="submit">Submit</button>
+    </form>
+    <form action="" id="queryResult">
+      <h3>Quary Result</h3>
+      <table style="width: 400px">
+        <tr>
+          <th>Cadet ID</th>
+          <th>Cadet Record</th>
+        </tr>
+        <tr>
+          <td style="height: 20px" id="queryResultID"></td>
+          <td id="queryResultRecord"></td>
+        </tr>
+      </table>
+      <hr />
+    </form>
+    <button
+      type="button"
+      onclick="printJS({printable:'queryResult',type:'html',css:'./assets/styles/style.css',header:'EVA Flight Training Academy Training Report'})"
+    >
+      Print To PDF
+    </button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/print-js/1.6.0/print.min.js"></script>
+    <script src="js_sdk/pocketbase.umd.js"></script>
+    <script src="index.js" type="text/javascript"></script>
+  </body>
+</html>
