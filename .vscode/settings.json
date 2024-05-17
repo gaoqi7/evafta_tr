@@ -7,7 +7,7 @@
             "overrideName": true,
         }
     },
-    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+    "vscode-neovim.neovimExecutablePaths.linux": "/opt/nvim-linux64/bin/nvim",
     
     
  
